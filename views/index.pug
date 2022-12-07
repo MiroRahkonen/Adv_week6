@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  nav
+    div(class="nav-wrapper container")
+      h1 Recipes
+      form
+        div(class="input-field right")
+          input(id="searchrecipe" type="search" placeholder="Search" required)
+
+
+
+  div(id="container" class="container")
+    div(id="showrecipe" class="col")
+    
+    div(id="addrecipe" class="col")
+      input(type="text", id="name-text" placeholder="Recipe name")
+      h4 Ingredients
+      textarea(id="ingredients-text" class="materialize-textarea" placeholder="New ingredient")
+      button(id="add-ingredient" type="button" class="btn") Add ingredient
+      h4 instructions
+      textarea(id="instructions-text" class="materialize-textarea" placeholder="Next step")
+      button(id="add-instruction" type="button" class="btn") Add instruction
+      br
+      
+      form(action="#" enctype="multipart/form-data")
+        div(class="file-field input-field")
+          div(class="btn")
+            span Add image
+            input(type="file" id="image-input" accept="image/*" multiple)
+          div(class="file-path-wrapper")
+            input(class="file-path validate" type="text")
+      
+      fieldset(id="categories")
+        legend Categories
+      
+      button(id="submit" type="submit" class="btn") Submit
